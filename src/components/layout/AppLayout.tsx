@@ -21,6 +21,7 @@ import DirectionsRunIcon from '@mui/icons-material/DirectionsRun'
 import HomeIcon from '@mui/icons-material/Home'
 import MenuBookIcon from '@mui/icons-material/MenuBook'
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome'
+import SupportAgentIcon from '@mui/icons-material/SupportAgent'
 import LightModeIcon from '@mui/icons-material/LightMode'
 import DarkModeIcon from '@mui/icons-material/DarkMode'
 import SettingsBrightnessIcon from '@mui/icons-material/SettingsBrightness'
@@ -92,6 +93,7 @@ const NAV: NavEntry[] = [
   { to: '/visualize', label: 'Visualize', icon: <InsightsIcon /> },
   { to: '/sprint', label: 'Sprint', icon: <DirectionsRunIcon /> },
   { to: '/wiki', label: 'Wiki', icon: <MenuBookIcon /> },
+  { to: '/help-desk', label: 'Help Desk', icon: <SupportAgentIcon /> },
   { to: '/claude/sessions', label: 'Claude', icon: <AutoAwesomeIcon /> }
 ]
 
@@ -131,7 +133,8 @@ export default function AppLayout(): JSX.Element {
   const showQueryContext =
     !location.pathname.startsWith('/sprint') &&
     !location.pathname.startsWith('/home') &&
-    !location.pathname.startsWith('/wiki')
+    !location.pathname.startsWith('/wiki') &&
+    !location.pathname.startsWith('/help-desk')
 
   const orgLabel = useMemo(() => {
     if (!connection?.organizationUrl) return ''
