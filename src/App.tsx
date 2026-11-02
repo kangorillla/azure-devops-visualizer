@@ -16,6 +16,7 @@ import ClaudeSessionsPage from './pages/ClaudeSessionsPage'
 import ClaudeSessionDetailPage from './pages/ClaudeSessionDetailPage'
 import ClaudeStatsPage from './pages/ClaudeStatsPage'
 import ClaudeJournalPage from './pages/ClaudeJournalPage'
+import HelpDeskPage from './pages/HelpDeskPage'
 import { checkCliAvailable } from './store/claudeSlice'
 
 export default function App(): JSX.Element {
@@ -114,6 +115,7 @@ export default function App(): JSX.Element {
         <Route path="/visualize" element={<VisualizePage />} />
         <Route path="/sprint" element={<SprintPage />} />
         <Route path="/wiki" element={<WikiPage />} />
+        <Route path="/help-desk" element={<HelpDeskPage />} />
         <Route path="/claude" element={<Navigate to="/claude/sessions" replace />} />
         <Route path="/claude/sessions" element={<ClaudeSessionsPage />} />
         <Route path="/claude/sessions/:id" element={<ClaudeSessionDetailPage />} />
